@@ -3,6 +3,11 @@
 
 <head>
   <title> Sample Title </title>
+  <script>
+    function addDigit(input){
+      document.getElementById("inputArea").value += input
+    }
+  </script>
 </head>
 
 <body>
@@ -10,26 +15,31 @@
     <h1> Calculator </h1>
   </header>
   <section>
-    <input type="text" disabled>
+    <input id="inputArea" type="text" disabled>
     <table>
       <tr>
-        <td><button> 1 </button></td>
-        <td><button> 2 </button></td>
-        <td><button> 3 </button> </td>
+        <td><button onclick="addDigit(this.innerText)"> 1 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 2 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 3 </button> </td>
+        <td><button onclick="addDigit(this.innerText)"> + </button></td>
+        <td rowspan="4" style="height: 5rem"><button style="height: 5rem" onclick="addDigit(this.innerText)"> = </button></td>
       </tr>
       <tr>
-        <td><button> 4 </button></td>
-        <td><button> 5 </button></td>
-        <td><button> 6 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 4 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 5 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 6 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> - </button></td>
       </tr>
       <tr>
-        <td><button> 7 </button></td>
-        <td><button> 8 </button></td>
-        <td><button> 9 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 7 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 8 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> 9 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> X </button></td>
       </tr>
       <tr>
-        <td colspan="2"><button style="width:100%;"> 0 </button></td>
-        <td><button> C </button></td>
+        <td colspan="2"><button style="width:100%;" onclick="addDigit(this.innerText)"> 0 </button></td>
+        <td><button onclick="addDigit(this.innerText)"> C </button></td>
+        <td><button onclick="addDigit(this.innerText)"> &#247; </button></td>
       </tr>
     </table>
 
